@@ -4,6 +4,9 @@ body {
   font-family: sans-serif;
   background-color: Pale Red
 }
+span{
+  cursor: pointer;
+}
 
 #text{
 	color: black
