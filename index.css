@@ -4,10 +4,7 @@ body {
   font-family: sans-serif;
   background-color: Pale Red
 }
-span{
-	color: red;
-	cursor: pointer;
-}
+
 #text{
 	color: black
 }
