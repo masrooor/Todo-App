@@ -11,28 +11,14 @@ class Todo extends React.Component{
 	this.handleChange = this.handleChange.bind(this);
 	this.handleSubmit = this.handleSubmit.bind(this);
 	this.deleteItem = this.deleteItem.bind(this);
-//	this.editTask = this.editTask.bind(this);
-	//this.onDelete = this.onDelete.bind(this);
+
 	
 	}
  handleChange(e) {
     this.setState({ name: e.target.value });
   }
 
-/*handleSubmit(e) {
-    e.preventDefault();
-    if (!this.state.name.length) {
-      return;
-    }
-    const newItem = {
-      name: this.state.name,
-      id: Date.now()
-    };
-    this.setState(state => ({
-      items: state.items.concat(newItem),
-      name: ''
-    }));
-  }*/
+
 deleteItem(index) {
     let array = this.state.items;
 	array.splice(index,1);
@@ -40,17 +26,7 @@ deleteItem(index) {
 		items : array,
 	
 	})
-	
-	 /*const newItem = {
-      //id: Date.now(),
-	  name: this.state.name,
-      
-    };
-	array.splice(newItem , 1);*/
-	
-	
-	
-  }
+}
   
    
 handleSubmit(e){
@@ -58,7 +34,6 @@ handleSubmit(e){
 	let tasks = this.state.items;
 	let currTask = this.state.name;
 	tasks.push({
-		//id: Date.now(),
 		id: this.state.items.length + 1,
 		name : currTask
 	})
@@ -68,18 +43,7 @@ handleSubmit(e){
 	})
 	
 }
-/*editTask(index, newValue){
-	var arr = this.state.items;
-	var ar = arr[index];
-	ar['name'] = newValue;
-	this.setState({
-		items : arr
-	})
-}
-updateItem(evt){
-	evt.preventDefault();
-	this.editTask(this.index , this.input.value);
-}*/
+
 
 	render(){
 		return(
